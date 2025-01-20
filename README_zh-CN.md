@@ -1,4 +1,4 @@
-[EN](README.md) | [中文](README_zh-CN.md)
+[EN](README.md) | [中文](README_zh-CN.md)  | [Русский](README_RU.md)
 
 ## 注意
 
@@ -7,11 +7,7 @@
 
 ## 描述
 
-Gramix 是一个使用 Electron+Vue3+TDLib 的第三方客户端
-
-## 关于
-
-大家可以通过关注我们的频道 https://t.me/GramixTips 来获取最新的开发进度以及与我联系。
+Gramix 是一个使用 `Electron-vite`+`TDLib` 的第三方客户端
 
 ## 开始
 
@@ -24,33 +20,35 @@ Gramix 是一个使用 Electron+Vue3+TDLib 的第三方客户端
 创建一个 .env 文件，并添加以下内容：
 
 ```.env
-TELEGRAM_API_ID=12345678  # Telegram API ID
-TELEGRAM_API_HASH=1234567abcdefghijkl # Telegram API Hash
+VITE_TG_API_ID=12345678  # Telegram API ID
+VITE_TG_API_HASH=1234567abcdefghijkl # Telegram API Hash
 ```
 
 ### TDLib
 
 为了与 Telegram 服务器通信，本项目使用 TDLib。
 前往 https://github.com/tdlib/td 获取源码，编译参考官方[文档](https://tdlib.github.io/td/build.html?language=JavaScript)JavaScript 的 windsows(node.js)构建方法。
-将构建好的`tdjson.dll` 文件放入 `resources/TDLib/bin` 目录下。
+将构建好的 有`tdjson.dll`的 `bin` 文件放入 `resources/TDLib/win/` 目录下。
 
 ### 调试
+
+克隆项目并安装依赖
 
 ```bash
 npm install
 npm run dev
 ```
 
-## 技术栈
+## 开发进度表
 
-- [Vue](https://cn.vuejs.org/) (前端支持) MIT License
-- [tdl](https://github.com/Bannerets/tdl#readme) (TDLib 的 JavaScript 包装器) MIT License
-- [Pinia](https://pinia.vuejs.org/zh/) (状态管理) MIT License
-- [TDLib](https://github.com/tdlib/td) (Telegram 数据库) BSL-1.0 license
-- [axios](https://axios-http.com/) (用于网络请求) MIT License
-- [Electron](https://www.electronjs.org/) (Electron 框架) MIT License
-- [lottie-web](https://github.com/airbnb/lottie-web) (动画库) MIT License
-- [Vue-router](https://router.vuejs.org/zh/) (路由管理) MIT License
-- [electron-vite](https://electron-vite.org/) (打包工具) MIT License
-- [styled-qr-code](https://github.com/KilianB/styled-qr-code) (用于生成二维码) MIT License
-- [tdesign-vue-next](https://tdesign.tencent.com/) (腾讯 UI 组件库) MIT License
+- [x] 用户授权
+- [x] 代理
+- [] 对话列表(当前正在进行)
+- [] 聊天页面(预计第一版只支持文本消息)
+- [] 设置页面(基础设置页)
+- [] 进一步完善对话页面的消息显示
+- [] 更多等待开发
+
+### 可能的问题
+
+- 不支持多个账号登录(没有开发经验需要大家帮助)
