@@ -1,0 +1,36 @@
+.span_Link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.span_Link:hover {
+  background: #dcdcdc;
+  border-radius: 5px;
+  padding: 0 3px;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.Heading {
+  margin: 0;
+  padding: 0;
+}
+.drag {
+  -webkit-app-region: drag;
+}
+.no_drag {
+  -webkit-app-region: no-drag;
+}
+.no_select {
+  /* 兼容Safari浏览器 */
+  -webkit-user-select: none;
+  user-select: none;
+}
+.no_Link {
+  cursor: default;
+  text-decoration: none;
+  color: #000;
+}

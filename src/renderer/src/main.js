@@ -1,16 +1,20 @@
 import { createApp } from 'vue'
-import App from './App.vue'
 import { createPinia } from 'pinia'
-import TDesign from 'tdesign-vue-next'
-import 'tdesign-vue-next/es/style/index.css'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
-import '@/assets/base.css'
+import App from './App.vue'
+
+import '@/assets/css/main.css'
+import '@/assets/themes/default.css'
+import 'tdesign-vue-next/es/style/index.css'
 
 import router from '@/router'
 
 const pinia = createPinia()
 const app = createApp(App)
+
+pinia.use(piniaPluginPersistedstate)
+
 app.use(pinia)
 app.use(router)
-app.use(TDesign)
 app.mount('#app')

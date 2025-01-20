@@ -1,5 +1,5 @@
-appId: io.xiaoqvan.gramix
-productName: gramix
+appId: com.electron.app
+productName: newgramix
 directories:
   buildResources: build
 files:
@@ -11,7 +11,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: gramix
+  executableName: newgramix
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
